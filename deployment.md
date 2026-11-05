@@ -175,8 +175,14 @@ All services should be `Up` / `healthy`. Open **http://localhost**.
    - Model Name: `bge-m3:latest`
    - Click **Detect Dimension** → it should report **1024**
    - **Save and close**
-5. *(Optional)* **Model Test** → send a prompt to confirm each model responds. Reranking is
-   optional and can be skipped for a basic RAG.
+5. **Set the workspace defaults** — avatar → **Workspace Settings → Defaults**: set
+   *Default chat model* = `qwen2.5:3b` and *Default embedding model* = `bge-m3`.
+6. **Assign each built-in agent's model** — **Agents** → open **Quick Answer** (the RAG Q&A
+   agent) → **Model Config** → set *Model* = `qwen2.5:3b` → **Save**. Registering a model in
+   Model Management is **not** enough: an agent with no model gives
+   *"Agent … is not ready. Please configure: Chat model"* the moment you chat. (The ReRank
+   field shows as required but can be left empty — reranking is optional for a basic RAG.)
+7. *(Optional)* **Model Test** (Model Management) → send a prompt to confirm each model responds.
 
 ---
 
