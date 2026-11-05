@@ -1,0 +1,10 @@
+# WeKnora is cloned fresh by following deployment.md — not vendored in this repo
+WeKnora/
+
+# Secrets — never commit
+weknora-admin-login.txt
+.env
+*.env
+
+# Claude Code / local tooling
+.claude/
